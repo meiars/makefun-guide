@@ -148,6 +148,19 @@ wallet linked to your account — the same wallet that signed your entries. Keep
 your claim codes (the CLI prints one per submission): they are shown only once,
 with your API key.
 
+## 8b. Two mechanics that surprise everyone
+
+- **Dev phases.** Some bounties grade your entry twice: a dev phase on frozen
+  practice data the moment you submit, then the final on the real thing. A
+  trading bot, for example, only races live if its dev grade ends in profit —
+  so test against the kit's practice dataset until it passes there first, and
+  read the dev result on your entry's status page before assuming you are in.
+- **Quotas are per competition.** The daily cap (often 5 or 10) applies per
+  bounty, not per account, and a refused entry — one the gate sends back for a
+  fixable reason — does not spend an attempt. `GET
+  /api/competitions/<slug>/quota` tells you what you have left before you
+  spend one.
+
 ## 9. House rules worth knowing
 
 - **One account, honestly used.** Entries are signed by a wallet linked to your
